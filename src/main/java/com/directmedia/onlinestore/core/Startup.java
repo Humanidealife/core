@@ -5,6 +5,7 @@
 package com.directmedia.onlinestore.core;
 
 import com.directmedia.onlinestore.core.entity.Artist;
+import com.directmedia.onlinestore.core.entity.Catalogue;
 import com.directmedia.onlinestore.core.entity.Work;
 
 /**
@@ -40,6 +41,17 @@ public class Startup {
         bad.setGenre("Pop");
         leGendarmeDeSaintTropez.setGenre("Comédie");
         
+        //Il ne ous reste à rajouter ces oeuvres au "Catalogue"
+        Catalogue.listOfWorks.add(minorityReport);
+        Catalogue.listOfWorks.add(bad);
+        Catalogue.listOfWorks.add(leGendarmeDeSaintTropez);
+        
+        //Afficher la liste des oeuvres au Catalogue avec le format "Titre(année)",
+        //  on va utilser une boucle "foreach" à partir de la liste des oeuvres du Catalogue.
+        //Un HashSet n'est pas forcément ordonné
+        for (Work work : Catalogue.listOfWorks) {
+            System.out.println(work.getTitle()+ "("+work.getRelease()+ ")");
+        }
         
     }
 }
