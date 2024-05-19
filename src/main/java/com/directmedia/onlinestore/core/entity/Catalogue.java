@@ -9,5 +9,6 @@ package com.directmedia.onlinestore.core.entity;
  * @author wangq
  */
 public class Catalogue {
-    
+    //On va ajouter une propriété statique ous forme de "HashSet"
+    public static 
 }
