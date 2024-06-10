@@ -20,6 +20,9 @@ public class Work {
     }
     
     //On rajoute donc des prorpiétés privées
+    
+    //On rajoute un attribut "id"
+    private long id;
     private String title;
     private String genre;
     private int release;
@@ -67,6 +70,14 @@ public class Work {
 
     public void setMainArtist(Artist mainArtist) {
         this.mainArtist = mainArtist;
+    }
+
+    public long getId() {
+        return id;
+    }
+
+    public void setId(long id) {
+        this.id = id;
     }
     
     
